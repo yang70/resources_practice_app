@@ -1,0 +1,16 @@
+<h1>Teams</h1>
+<h4><%= link_to 'Create Team', new_team_path %></h4>
+
+<table>
+  <tr>
+    <th>TEAM</th>
+    <th>SPORT</th>
+  </tr>
+<% @teams.each do |team| %>
+  <tr>
+    <td><p><%= team.name %></p></td>
+    <td><p><%= team.sport %></p></td>
+    <td><p><%= link_to 'View', team %></p></td>
+  </tr>
+<% end %>
+</table>

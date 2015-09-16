@@ -1,0 +1,9 @@
+<h1><%= @player.name %></h1>
+
+<p><strong>Team:</strong> <%= @team.name %></p>
+<p><strong>Position:</strong> <%= @player.position %></p>
+<p><strong>Number:</strong> <%= @player.number %></p>
+
+<%= link_to 'Back', team_players_path(@team, @player) %> |
+<%= link_to 'Edit', edit_team_player_path(@team, @player) %> |
+<%= link_to 'Delete', team_player_path(@team, @player), method: :delete, data: { confirm: 'Are you sure?' } %>
