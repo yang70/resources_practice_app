@@ -1,0 +1,22 @@
+<h1>Roster for <%= @team.name %></h1>
+<%= link_to 'Add player to roster', new_team_player_path %> |
+<%= link_to 'Teams', teams_path %>
+
+<p></p>
+
+<table>
+  <tr>
+    <th>NAME</th>
+    <th>NUMBER</th>
+    <th>POSITION</th>
+    <th></th>
+  </tr>
+  <% @players.each do |player| %>
+    <tr>
+      <td><p><%= player.name %></p></td>
+      <td><p><%= player.number %></p></td>
+      <td><p><%= player.position %></p></td>
+      <td><p><%= link_to 'View', team_player_path(@team, player) %></p></td>
+    </tr>
+  <% end %>
+</table>

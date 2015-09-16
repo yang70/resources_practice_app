@@ -1,0 +1,9 @@
+<h1>Team: <%= @team.name %></h1>
+<h1>Sport: <%= @team.sport %></h1>
+
+<h3><%= link_to 'View Roster', team_players_path(@team) %></h3>
+
+
+<%= link_to 'Edit Name/Sport', edit_team_path %> |
+<%= link_to 'Delete Team', @team, method: :delete, data: { confirm: 'Are you sure?' } %> |
+ <%= link_to 'All Teams', teams_path %>
